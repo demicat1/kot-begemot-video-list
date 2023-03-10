@@ -24,21 +24,18 @@ const genres = [
 function App() {
   const [idCategory, setIdCategory] = React.useState('')
   const [order, setOrder] = React.useState('')
+  const [showDate, setShowDate] = React.useState(true)
   const [sort, setSort] = React.useState('')
-  const [showDate, setShowDate] = React.useState(false)
   const [isLoading, setIsLoading] = React.useState(true)
   const [collections, setCollections] = React.useState([])
 
   React.useEffect(() => {
     setIsLoading(true)
 
-    fetch(`https://6401939e3779a86262590fe4.mockapi.io/kot_begemot?${
-      idCategory ? `genres=${idCategory}` : ''
-    }&${
-      sort ? `sortBy=${sort}` : ''
-    }&${
-      order ? `order=${order}` : ''
-    }`)
+    fetch(`https://6401939e3779a86262590fe4.mockapi.io/kot_begemot?${idCategory ? `genres=${idCategory}` : ''
+      }&${sort ? `sortBy=${sort}` : ''
+      }&${order ? `order=${order}` : ''
+      }`)
       .then((res) => res.json())
       .then((json) => {
         setCollections(json)
@@ -57,6 +54,7 @@ function App() {
             onClick={() => {
               setOrder('')
               setSort('')
+              // setShowDate(true)
               console.log(order)
             }}>По релевантности</li>
           <li
@@ -64,6 +62,7 @@ function App() {
             onClick={() => {
               setOrder('asc')
               setSort('rating')
+              setShowDate(true)
               console.log(order)
             }}>По возрастающей</li>
           <li
@@ -71,14 +70,16 @@ function App() {
             onClick={() => {
               setOrder('desc')
               setSort('rating')
+              setShowDate(true)
               console.log(order)
             }}>По убывающей</li>
           <br></br>
           <li
-            className={showDate ? 'active' : ''}
+            className={showDate ? '' : 'active'}
             onClick={() => {
-              setShowDate(prev => !prev )
-              setSort(sort ? 'date' : '')
+              setSort(showDate ? 'date' : '')
+              setOrder('')
+              setShowDate((prev) => !prev)
               console.log(showDate)
             }}>По дате просмотра</li>
           <br></br>
@@ -86,7 +87,6 @@ function App() {
             className={idCategory ? '' : 'active'}
             onClick={() => {
               setIdCategory('')
-              // setOrder('')
             }}>все</li>
           {genres.map((genre) => (
             <li
