@@ -1,5 +1,33 @@
 [
   {
+    "link": "https://youtu.be/75SgRriI1TE",
+    "title": "ЧУЧЕЛА...",
+    "genres": ["люди", "маньяк", "ребенок"],
+    "rating": 9,
+    "date": "2023-03-12T00:00.000Z"
+  },
+  {
+    "link": "https://youtu.be/HTfZUOKe_iU",
+    "title": "БОБИК...",
+    "genres": ["мистика", "животные", "монтср"],
+    "rating": 8,
+    "date": "2023-03-14T00:00.000Z"
+  },
+  {
+    "link": "https://youtu.be/Jhdf9N_L7rU",
+    "title": "КАК Я ВЛЮБИЛСЯ В НЕЧИСТЬ! ПОЛУДЕННИЦА.",
+    "genres": ["мистика"],
+    "rating": 7,
+    "date": "2023-03-10T00:00.000Z"
+  },
+  {
+    "link": "https://youtu.be/qJP5O2BGgVc",
+    "title": "А ЕСЛИ БЫ Я НЕ ЗАПЕР ДВЕРЬ?",
+    "genres": ["друг", "мистика", "дух"],
+    "rating": 10,
+    "date": "2023-03-10T00:00.000Z"
+  },
+  {
     "link": "https://youtu.be/-oHZMETMlUA",
     "title": "Cyицид в чат рулетке",
     "genres": ["друг", "мистика"],
@@ -17,7 +45,7 @@
     "link": "https://youtu.be/sYMug6JPZqg",
     "title": "Пиццу заказывали?",
     "genres": ["демон", "экзорцизм", "мистика", "ребенок"],
-    "rating": 10,
+    "rating": 9,
     "date": "2023-03-09T00:00.000Z"
   },
   {

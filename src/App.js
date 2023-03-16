@@ -1,6 +1,7 @@
 import React from 'react';
 import { Collection } from './Collection'
 import './index.scss';
+import ScrollUpButton from './components/ScrollUpButton';
 
 const genres = [
   { "name": "друг", "description": "В истории встречаются друзья героя" },
@@ -17,6 +18,7 @@ const genres = [
   { "name": "технологии", "description": "В истории технологии играют главную роль " },
   { "name": "параллельный", "description": "В истории описываются элементы параллельной реальности" },
   { "name": "семья", "description": "В истории встречаются семьи" },
+  { "name": "животные", "description": "В истории встречаются животные" },
   { "name": "маньяк", "description": "В истории встречаются люди маньяки" }
 ]
 
@@ -54,7 +56,6 @@ function App() {
             onClick={() => {
               setOrder('')
               setSort('')
-              // setShowDate(true)
               console.log(order)
             }}>По релевантности</li>
           <li
@@ -114,7 +115,7 @@ function App() {
             <Collection
               key={obj.title}
               title={obj.title}
-              genres={obj.genres.join(', ')}
+              genres={obj.genres}
               link={obj.link}
               rating={obj.rating}
             />
@@ -122,8 +123,10 @@ function App() {
         )
         }
       </div>
+      <ScrollUpButton />
     </div>
   );
+
 }
 
 export default App;
